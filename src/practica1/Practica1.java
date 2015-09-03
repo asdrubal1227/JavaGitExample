@@ -85,7 +85,8 @@ public class Practica1 {
                         aux1.setautor(autor);
                         fichas.set(este,aux1);
                         } else {
-                            System.out.println("Este libro no se encuentra en la base de datos");}
+                            System.out.println("Este libro no se encuentra en la base de datos");
+                        }
                         veri=false;
                     break;
                     case 3:
