@@ -14,6 +14,7 @@ public class Practica1 {
         static ArrayList<Gestion> fichas = new ArrayList<Gestion>();
         static ArrayList<Prestamo> fichasp = new ArrayList<Prestamo>();
         static Scanner teclado= new Scanner (System.in);
+        static boolean veri=false;
 
     /**
      * @param args the command line arguments
@@ -23,7 +24,6 @@ public class Practica1 {
     String Nombre;
      String autor;
      String cedula;
-     boolean veri=false;
      int año,este = 0;
       String codigo;
      int cantidad;
@@ -82,7 +82,7 @@ public class Practica1 {
                                 veri=true;
                             }
                         }
-                        if(veri){
+                        if(veri==true){
                         gestion.datos();
                         Nombre=gestion.getNombre();
                         año=gestion.getaño();
@@ -111,20 +111,15 @@ public class Practica1 {
                             Busca=gestion.getNombre();
                             if (buscanom.equals(Busca)){
                                 este=i;
-                        veri=true;
+                                veri=true;
                             }
                         }
-                        if(veri){
+                        if(veri == true){
                         fichas.remove(este);
                         veri=false;
                         } else {
-                            System.out.println("Este libro no se encuentra en la base de datos");}
-                        //libro.ver_datos();
-                       /* for(int i = 0;i<fichas.size();i++){
-                        libro= fichas.get(i);
-                        libro.ver_datos();
-
-                        }*/
+                            System.out.println("Este libro no se encuentra en la base de datos");
+                        }
                     break;
                     case 4:
                         //disco.ver_datos();                    
