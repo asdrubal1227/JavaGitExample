@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this emplate file, choose Tools | Templates
- * and op the template in the editor.
- */
 package practica1;
 
 import java.util.ArrayList;
@@ -16,9 +11,6 @@ public class Practica1 {
         static Scanner teclado= new Scanner (System.in);
         static boolean veri=false;
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {int elige;
     int selec; 
     String Nombre;
@@ -73,15 +65,8 @@ public class Practica1 {
                     case 2:                    
                         System.out.println("Ingrese Nombre de Libro a actualizar");
                         teclado.nextLine();
-                        buscanom=teclado.nextLine();                    
-                        for(int i = 0;i<fichas.size();i++){
-                            gestion= fichas.get(i);
-                            Busca=gestion.getNombre();
-                            if (buscanom.equals(Busca)){
-                                este=i;
-                                veri=true;
-                            }
-                        }
+                        buscanom=teclado.nextLine();
+                        este=recorrer(buscanom);
                         if(veri==true){
                         gestion.datos();
                         Nombre=gestion.getNombre();
@@ -106,14 +91,7 @@ public class Practica1 {
                         System.out.println("Ingrese Nombre de Libro a eliminar");
                         teclado.nextLine();
                         buscanom=teclado.nextLine();                    
-                        for(int i = 0;i<fichas.size();i++){
-                            gestion= fichas.get(i);
-                            Busca=gestion.getNombre();
-                            if (buscanom.equals(Busca)){
-                                este=i;
-                                veri=true;
-                            }
-                        }
+                        este=recorrer(buscanom);
                         if(veri == true){
                         fichas.remove(este);
                         veri=false;
@@ -126,14 +104,7 @@ public class Practica1 {
                         System.out.println("Ingrese Nombre a buscar");
                         teclado.nextLine();
                         buscanom=teclado.nextLine();
-                        for(int i = 0;i<fichas.size();i++){
-                            gestion= fichas.get(i);
-                            Busca=gestion.getNombre();
-                            if (buscanom.equals(Busca)){
-                                este=i;
-                                veri=true;
-                            }
-                        }
+                        este=recorrer(buscanom);
                         if(veri == true){
                             gestion= fichas.get(este);
                             gestion.Buscar();                    
@@ -165,23 +136,10 @@ public class Practica1 {
                     teclado.nextLine();
                     buscanom=teclado.nextLine();
                     //prestamo.prestar();
-                    for(int j = 0;j<fichas.size();j++){
-                    gestion= fichas.get(j);
-                    Busca=gestion.getNombre();
-                    if (buscanom.equals(Busca)){
-                        este=j;
-                        veri=true;
-                    }
-                    }
+                    este=recorrer(buscanom);
                     
                         if(veri){
                     gestion= fichas.get(este);
-                    
-                   // Gestion aux2 = new Gestion();
-                    //aux2.prestar(gestion.getcantidad(),gestion.getNombre(),gestion.getautor(),gestion.getaño(),gestion.getcodigo(),gestion.getarea());
-                    //fichas.add(este,aux2);
-                    //System.out.println(""+aux2.getcantidad());
-                    
                      Nombre=gestion.getNombre();
                     año=gestion.getaño();
                     autor=gestion.getautor();
@@ -271,11 +229,9 @@ public class Practica1 {
              
            
         }
-        
        
     }
     public static int recorrer(String nomb){
-        boolean veri;
         int este=0;      
          for(int i = 0;i<fichas.size();i++){
             gestion= fichas.get(i);             
