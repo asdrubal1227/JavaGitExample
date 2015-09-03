@@ -3,10 +3,7 @@ package practica1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author pci10
- */
+
 public class Gestion extends Practica1 {  
     public Scanner teclado= new Scanner (System.in);
 
@@ -117,38 +114,4 @@ public class Gestion extends Practica1 {
     public void setcantidad(int cantidad) {
         this.cantidad = cantidad;
     }
- /*public void Loading_Data(String n){
-     Scanner teclado = new Scanner(System.in);
-     System.out.println(n+" Nombre");
-     Nombre=teclado.next();
-     System.out.println(n+" Aprellidos");
-     Apellidos=teclado.next();
-     System.out.println(n+" Edad");
-     Edad=teclado.nextInt();
-     System.out.println(n+" Cedula");
-     Cedula=teclado.nextDouble();
-     System.out.println(n+" Fecha de nacimiento");
-     Nacimiento=teclado.next();
-     System.out.println(n+" Direccion");
-     Direcion=teclado.next();
-     System.out.println(n+" Telefono");
-     Telefono=teclado.nextDouble(); 
-  }
-    public void prestar(int cantidad,String Nombre, String autor, int año,String codigo, String area) {
-        this.cantidad = cantidad-1;
-        this.Nombre=Nombre;
-        this.autor=autor;
-        this.año=año;
-        this.codigo=codigo;
-        this.area=area;
-    }
-    
-    public void devolver(int cantidad,String Nombre, String autor, int año,String codigo, String area) {
-        this.cantidad =cantidad+1;
-        this.Nombre=Nombre;
-        this.autor=autor;
-        this.año=año;
-        this.codigo=codigo;
-        this.area=area;
-    }*/
 }
