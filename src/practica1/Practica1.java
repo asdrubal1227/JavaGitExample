@@ -60,7 +60,8 @@ public class Practica1 {
                         aux.setarea(area);
                         aux.setcodigo(codigo);
                         aux.setautor(autor);
-                        fichas.add(aux);
+                        fichas.add(aux);                   
+                            veri=false;
                     break;
                     case 2:                    
                         System.out.println("Ingrese Nombre de Libro a actualizar");
@@ -83,9 +84,9 @@ public class Practica1 {
                         aux1.setcodigo(codigo);
                         aux1.setautor(autor);
                         fichas.set(este,aux1);
-                        veri=false;
                         } else {
                             System.out.println("Este libro no se encuentra en la base de datos");}
+                        veri=false;
                     break;
                     case 3:
                         System.out.println("Ingrese Nombre de Libro a eliminar");
@@ -94,10 +95,11 @@ public class Practica1 {
                         este=recorrer(buscanom);
                         if(veri == true){
                         fichas.remove(este);
-                        veri=false;
+                            System.out.println("El libro ha sido removido");
                         } else {
                             System.out.println("Este libro no se encuentra en la base de datos");
                         }
+                        veri=false;
                     break;
                     case 4:
                         //disco.ver_datos();                    
@@ -107,12 +109,12 @@ public class Practica1 {
                         este=recorrer(buscanom);
                         if(veri == true){
                             gestion= fichas.get(este);
-                            gestion.Buscar();                    
-                            veri=false;
+                            gestion.Buscar(); 
                         } else {
                             System.out.println("Este libro no se encuentra en la base de datos");
 
-                        }   
+                        }                      
+                            veri=false;
                     break;
                     default:
                         System.out.println("ingreso una opción incorrecta, intente de nuevo");
