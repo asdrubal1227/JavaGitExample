@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author practi10
+ * @author pacti10
  */
 public class Gestion extends Practica1 {  
     public Scanner teclado= new Scanner (System.in);
