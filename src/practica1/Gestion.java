@@ -17,6 +17,8 @@ public class Gestion extends Practica1 {
     private  String codigo;
     private int cantidad;
     private String area;
+    private int selctarea;
+    
     
     public void Menu(){
     }
@@ -33,9 +35,32 @@ public class Gestion extends Practica1 {
      this.codigo=teclado.next();
      System.out.println("Ingrese Cantidad");
      this.cantidad=teclado.nextInt();
-     System.out.println("Ingrese Area");
-     this.area=teclado.next();
-                      
+     System.out.println("Escoja Area de publicación");
+                System.out.println("/////////////////");
+                System.out.println("1. Química");
+                System.out.println("2. Física");
+                System.out.println("3. Tecnología");
+                System.out.println("4. Cálculo");
+                System.out.println("5. Programación");
+                System.out.println("/////////////////");
+     this.selctarea=teclado.nextInt();
+     switch (selctarea){
+         case 1:
+            this.area="Química";
+            break;
+         case 2:
+            this.area="Física";
+            break;
+         case 3:
+            this.area="Tecnología";
+            break;
+         case 4:
+            this.area="Cálculo";
+            break;
+         case 5:
+            this.area="Programación";
+            break;
+     }
     //esta saltando a preguntar por el telefono 
  }
  public void  Buscar(){
