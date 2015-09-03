@@ -234,9 +234,6 @@ public class Practica1 {
                     fichasp.remove(este);
                     este=recorrer(prestamo.getNombre1());
                     gestion=fichas.get(este);
-                    //Gestion aux3 = new Gestion();
-                    //aux3.devolver(gestion.getcantidad(),gestion.getNombre(),gestion.getautor(),gestion.getaño(),gestion.getcodigo(),gestion.getarea());
-                    //fichas.add(este,aux3);
                     Nombre=gestion.getNombre();
                     año=gestion.getaño();
                     autor=gestion.getautor();
@@ -262,6 +259,9 @@ public class Practica1 {
                          for(int i = 0;i<fichasp.size();i++){
                     prestamo= fichasp.get(i);
                     prestamo.mostrar();
+                    if(fichasp.size()==0){
+                            System.out.println("No hay libros en prestamo");
+                            }
                          }
                          break;
                 default:
