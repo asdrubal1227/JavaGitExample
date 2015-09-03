@@ -62,7 +62,7 @@ public class Practica1 {
                         aux.setautor(autor);
                         fichas.add(aux);                   
                             veri=false;
-                    break;
+                    break;//
                     case 2:                    
                         System.out.println("Ingrese Nombre de Libro a actualizar");
                         teclado.nextLine();
