@@ -1,6 +1,6 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this emplate file, choose Tools | Templates
  * and ope the template in the editor.
  */
 package practica1;
@@ -79,8 +79,10 @@ public class Practica1 {
                             Busca=gestion.getNombre();
                             if (buscanom.equals(Busca)){
                                 este=i;
+                                veri=true;
                             }
                         }
+                        if(veri){
                         gestion.datos();
                         Nombre=gestion.getNombre();
                         año=gestion.getaño();
@@ -95,7 +97,10 @@ public class Practica1 {
                         aux1.setarea(area);
                         aux1.setcodigo(codigo);
                         aux1.setautor(autor);
-                        fichas.add(este,aux1);
+                        fichas.set(este,aux1);
+                        veri=false;
+                        } else {
+                            System.out.println("Este libro no se encuentra en la base de datos");}
                     break;
                     case 3:
                         System.out.println("Ingrese Nombre de Libro a eliminar");
@@ -106,9 +111,14 @@ public class Practica1 {
                             Busca=gestion.getNombre();
                             if (buscanom.equals(Busca)){
                                 este=i;
+                        veri=true;
                             }
                         }
+                        if(veri){
                         fichas.remove(este);
+                        veri=false;
+                        } else {
+                            System.out.println("Este libro no se encuentra en la base de datos");}
                         //libro.ver_datos();
                        /* for(int i = 0;i<fichas.size();i++){
                         libro= fichas.get(i);
@@ -165,8 +175,11 @@ public class Practica1 {
                     Busca=gestion.getNombre();
                     if (buscanom.equals(Busca)){
                         este=j;
+                        veri=true;
                     }
                     }
+                    
+                        if(veri){
                     gestion= fichas.get(este);
                     
                    // Gestion aux2 = new Gestion();
@@ -195,7 +208,12 @@ public class Practica1 {
                     Prestamo aux4 = new Prestamo();
                     aux4.setNombre1(Nombre);
                     aux4.setcedula(cedula);
-                         fichasp.add(aux4);
+                         fichasp.add(aux4);                    
+                            veri=false;
+                        } else {
+                            System.out.println("Este libro no se encuentra en la base de datos");
+
+                        }   
                 break;
                 case 2:
                     
@@ -208,8 +226,10 @@ public class Practica1 {
                         Busca=prestamo.getNombre1();
                         if (buscanom.equals(Busca)){
                             este=i;
+                            veri=true;
                         }
                     }
+                    if(veri){
                     prestamo= fichasp.get(este);
                     fichasp.remove(este);
                     este=recorrer(prestamo.getNombre1());
@@ -230,7 +250,12 @@ public class Practica1 {
                     aux3.setarea(area);
                     aux3.setcodigo(codigo);
                     aux3.setautor(autor);
-                    fichas.set(este,aux3);
+                    fichas.set(este,aux3);                    
+                            veri=false;
+                        } else {
+                            System.out.println("Este libro no esta en prestamo");
+
+                        }   
                     break;
                          
                      case 3:
