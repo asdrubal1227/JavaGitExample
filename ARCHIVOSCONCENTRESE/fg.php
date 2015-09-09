@@ -14,7 +14,7 @@
 					for ($i=0; $i<6; $i++){
 						for ($j=0; $j<6; $j++){
 							while ( $p == 1) {
-								$num=rand(0,17);
+								$num=mt_rand(0,17);
 								$veri[$num]=$veri[$num]+1;
 								if ($veri[$num] <= 2){
 									$juego[$i][$j]=$num+1;
